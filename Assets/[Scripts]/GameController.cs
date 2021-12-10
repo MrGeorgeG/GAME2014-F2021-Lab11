@@ -5,12 +5,16 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public Transform player;
-    public Transform playerSpawnPoint;
+    public Transform currentSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        player.position = playerSpawnPoint.position;
+        player.position = currentSpawnPoint.position;
     }
 
+    public void setCurrentSpawnPoint(Transform newSpawnPoint)
+    {
+        currentSpawnPoint = newSpawnPoint;
+    }
 }
